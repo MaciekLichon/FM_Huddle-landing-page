@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-regular;
+  font-weight: $fw-regular;
+  font-size: $fs-mobile-regular;
+  color: $clr-white;
+
+  background-image: url('../images/bg-mobile.svg');
+  background-color: $clr-violet;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  padding: 0 2.25rem;
+}
+
+.container {
+  max-width: 1295px;
+  margin: 0 auto;
+}
+
+.button {
+  background: none;
+  border: none;
+  transition: 0.1s;
+  cursor: pointer;
+
+  &.button-register {
+    color: $clr-violet;
+    background-color: $clr-white;
+    font-size: $fs-mobile-buttons;
+    padding: 0.688rem 0;
+    width: 200px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+    border-radius: 25px;
+
+    &:hover {
+      color: $clr-white;
+      background-color: $clr-magenta;
+    }
+  }
+
+  &.button-footer {
+    border: 1px solid $clr-white;
+    color: $clr-white;
+    border-radius: 50%;
+    width: 28px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+
+    &:hover {
+      color: $clr-magenta;
+      border-color: $clr-magenta;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  body {
+    background-image: url('../images/bg-desktop.svg');
+    background-size: cover;
+
+    font-size: $fs-desktop-regular;
+
+    padding: 0 5rem;
+  }
+
+  .button.button-register {
+    padding: 0.813rem 0 1rem 0;
+    font-size: $fs-desktop-regular;
+  }
+
+  .button.button-footer { width: 40px; }
+}
